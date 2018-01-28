@@ -14,7 +14,7 @@ docker run -p some-port:8080 --name challenge \
 --env AUTHENTICATION_SERVICE=auth-server \
 --env PORT=8080 \
 --link some-mysql-container-name:mysql -it  \
-ulboralabs/oauth2server sh
+ulboralabs/challenge sh
 ```
 #### or as a daemon (suggested)
 ```
@@ -26,7 +26,7 @@ docker run -p some-port:8080 --name challenge \
 --env AUTHENTICATION_SERVICE=auth-server \
 --env PORT=8080 \
 --link some-mysql-container-name:mysql -d  \
-ulboralabs/oauth2server sh
+ulboralabs/challenge sh
 ```
 # Note
 ### The link to your mysql container should always end with :mysql as shown above
@@ -49,6 +49,6 @@ named MYSQL_PORT_3306_TCP_ADDR.
 
 # Connect to running instance
 ```
-docker exec -it ulboralabs/oauth2server sh
+docker exec -it ulboralabs/challenge sh
 ```
 
